@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cv</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #282828;
+            color: white;
+            padding: 50px;
+            text-align: left;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #6a0dad;
+            width: 50%;
+            height: 100%;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+            z-index: -1;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #6a0dad;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .skills, .achievements {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .block {
+            background-color: white;
+            padding: 20px;
+            border-left: 5px solid #6a0dad;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .counter {
+            text-align: center;
+        }
+
+        .button {
+            background-color: #6a0dad;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #5c0ba5;
+        }
+
+        .button:active {
+            background-color: #4e0996;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>лиза онопина 1 курс пми</h1>
+        <div class="header-overlay"></div>
+    </header>
+
+    <div class="container">
+        
+        <section>
+            <h2>Мои навыки</h2>
+            <div class="skills">
+                <div class="block">
+                    <h3>Python</h3>
+                    <p>его немного знаю</p>
+                </div>
+                <div class="block">
+                    <h3>C++ </h3>
+                    <p>его знаю еще более немного</p>
+                </div>
+                <div class="block">
+                    <h3>HTML & CSS</h3>
+                    <p>в 10 классе заставили сайт создавать, так что что-то умею</p>
+                </div>
+                <div class="block">
+                    <h3>LaTeX</h3>
+                    <p>пришлось разобраться, без теха домашки не принимают :( </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section>
+            <h2>Мои достижения</h2>
+            <div class="achievements">
+                <div class="block">
+                    <h3>JavaScript</h3>
+                    <p>могу кнопочку вот такую сделать</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="counter">
+            <button class="button" id="counterButton">Нажали 0 раз</button>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        const button = document.getElementById('counterButton');
+
+        button.addEventListener('click', () => {
+            count++;
+            button.textContent = `Нажали ${count} раз${count !== 1 ? 'а' : ''}`;
+        });
+    </script>
+</body>
+</html>
