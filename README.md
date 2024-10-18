@@ -1,1 +1,0 @@
-# onopinalz.github.io
